@@ -97,11 +97,28 @@ router.get("/:id", async (req,res) =>{
 
 //get all posts
 
-/*router.get("/", async (req,res) =>{
+router.get("/", async (req,res) =>{
+    const username= req.query.user;
+    const catName= req.query.cat;
     try {
-        const post= await Post.findById(req.params.id);
+        let posts;
+        if(username)
+        {
+            posts= await Post.find({username})
+        }
+        else if(catName)
+        {
+            posts=await Post.find({categories:
+            {
+                $in:[catName],
+            },})
+        }
+        else 
+        {
+            posts= await Post.find()
+        }
+        res.status(200).json(posts);
         
-        res.status(200).json(post);
     }
     catch(err)
     {
@@ -109,7 +126,7 @@ router.get("/:id", async (req,res) =>{
     }
 } )
 
-*/
+
 
 
 module.exports=router   
