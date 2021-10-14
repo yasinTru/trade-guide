@@ -1,0 +1,70 @@
+.addPost
+{
+    padding-top: 50px;
+}
+
+.addForm
+{
+    position: relative;
+}
+
+.addFormGroup
+{
+    
+    display: flex;
+    margin-left: 100px;
+    align-items: center;
+}
+
+.addPostIcon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius:50%;
+    border: 2px solid;
+    font-size: 25px;
+    color: rgb(90, 90, 83);
+    
+}
+
+.addInput
+{
+    width: 66vw;
+    padding: 25px;
+    font-size: 25px;
+    border: none;
+}
+
+.addInput:focus
+{
+    outline: none;
+}
+
+.addText
+{
+    
+    font-size: 20px;
+    border:1px solid;
+    border-top:2.3px solid;
+    border-radius: 21px;
+   padding-bottom:200px;
+   
+}
+
+.addSubmit
+{
+    position:absolute;
+    top:20px;
+    right: 200px;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: teal;
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+}

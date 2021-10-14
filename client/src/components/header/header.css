@@ -1,0 +1,54 @@
+.header
+{
+    margin-top: 50px;
+    
+    
+}
+
+
+.headerTitles
+{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000;
+}
+.headerCircle
+{
+    
+    position:absolute;
+    width: 300px;
+    height: 200px;
+    top:20.8%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: black;
+    background-color:lightcyan;
+   
+}
+
+.titleSmall
+{
+    position:absolute;
+    top:10%;
+    font-size: 30px;
+}
+
+.titleLarge
+{
+    position:absolute;
+    top:16%;
+    font-size: 88px;
+    
+}
+
+.headerImage
+{
+    width:100%;
+    height: 700px;
+    margin-top: 50px;
+    object-fit: cover;
+}
