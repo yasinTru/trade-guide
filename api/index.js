@@ -25,7 +25,7 @@ const storage= multer.diskStorage
   },
   filename:(req,file,cb)=>
   {
-    cb(null, "EkranAlıntısı.png");
+    cb(null, "testImg.png");
   },
 }) 
 

@@ -1,32 +1,28 @@
 import React from 'react'
 import "./source.css"
 
-export default function Source() {
+export default function Source({source}) {
     return (
         <div className="source">
+            {source.photo}
             <img
             className="sourceImage"
-            src="https://blog.finanswebde.com/content/images/2019/12/Blog_Dead_Cat_Bounce.jpg"
+            src={source.photo}
             alt="deadCat"
             ></img>
             <div className="sourceInfo">
                 <div className="sourceCategories">
-                    <span className="sourceCategory">Indicator</span>
+                    {source.categories.map(cate=>
+                        (
+                            <span className="sourceCategory">{cate.name}</span>
+                        ))}
                     <span className="sourceCategory">Formation</span>
                 </div>
-                <span className="sourceTitle">Post Title</span>
+                <span className="sourceTitle">{source.title}</span>
                 <hr/>
-                <span className="sourceDate">2 days ago</span>
+                <span className="sourceDate">{new Date(source.createdAt).toDateString()}</span>
             </div>
-            <p className="sourceDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Quisquam amet incidunt, corporis deserunt molestias sit est, eius inventore tenetur et 
-             quo possimus! Veritatis, dignissimos. Perspiciatis facilis eum totam omnis sequi?
-             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Quisquam amet incidunt, corporis deserunt molestias sit est, eius inventore tenetur et 
-             quo possimus! Veritatis, dignissimos. Perspiciatis facilis eum totam omnis sequi?
-             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Quisquam amet incidunt, corporis deserunt molestias sit est, eius inventore tenetur et 
-             quo possimus! Veritatis, dignissimos. Perspiciatis facilis eum totam omnis sequi?</p>
+            <p className="sourceDescription">{source.descripton}</p>   
             
         </div>
     )
