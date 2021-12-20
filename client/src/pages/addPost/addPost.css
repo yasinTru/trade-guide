@@ -16,6 +16,18 @@
     align-items: center;
 }
 
+.addPostImg
+{
+    margin: 10px;
+    margin-left: 200px;
+    display: flex;
+    object-fit: cover;
+    border-radius:1%;
+    width: 65vw;
+    height: 300px;
+
+}
+
 .addPostIcon
 {
     display: flex;
@@ -32,8 +44,9 @@
 }
 
 .addInput
-{
-    width: 66vw;
+{   
+    margin-left: 75px;
+    width: 65vw;
     padding: 25px;
     font-size: 25px;
     border: none;

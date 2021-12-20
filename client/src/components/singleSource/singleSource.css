@@ -7,6 +7,8 @@
 {
     padding: 30px;
     padding-right: 9px;
+    display: flex;
+    flex-direction: column;
 }
 
 .singleSourceImage
@@ -17,6 +19,26 @@
     object-fit:contain;
     border-color:darkslateblue;
     border-style:solid;
+}
+
+.singleSourceTitleInput
+{
+    text-align:center;
+     margin: 10px;
+     font-family: serif;
+     font-size:26px;
+     color: rgb(128, 115, 115);
+     border:none;
+     border-top: 1px solid rgb(122, 114, 114);
+     border-bottom: 1px solid rgb(122, 114, 114);
+     border-right: 1px solid rgb(122, 114, 114);
+
+}
+
+.singleSourceTitleInput:focus
+{
+    outline:none;
+
 }
 
 .singleSourceTitle
@@ -85,4 +107,32 @@
     margin-left: 20px;
     font-size: 28px;
     font-weight: 700;
+}
+
+.singleSourceDescInput
+{
+    border:none;
+    color:#666;
+    border-top: 1px solid rgb(122, 114, 114);
+     border-bottom: 2px solid rgb(122, 114, 114);
+     border-right: 2px solid rgb(122, 114, 114);
+}
+
+.singleSourceDescInput:focus
+{
+    outline:none;
+}
+
+.singleSourceButton
+{
+    border:none;
+    background-color: yellowgreen;
+    width:100px;
+    border-radius: 20px;
+    padding:6px;
+    color:white;
+    cursor:pointer;
+    align-self:flex-end;
+    
+
 }

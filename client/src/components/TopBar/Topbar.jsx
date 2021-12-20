@@ -1,8 +1,15 @@
 import "./topbar.css"
-import avatar from "../../assets/avatar.png"
+import {Context} from "../../../src/context/Context";
+import {useContext} from "react";
 import { Link } from "react-router-dom"
 export default function Topbar() {
-    
+
+    const {user, dispatch}= useContext(Context); 
+    const PublicFolder= "http://localhost:4000/images/"
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" });
+      };  
+
     return (
         <div className="top">
             <div className="topLeft">
@@ -15,24 +22,42 @@ export default function Topbar() {
                     <li className="topListItem"> <Link to="/formations" style={{textDecoration:"none", color:"inherit"}}> FORMATIONS </Link>  </li>
                     <li className="topListItem"> <Link to="/indicators" style={{textDecoration:"none", color:"inherit"}}> INDICATORS </Link>  </li>
                     <li className="topListItem"><Link to="/addPost" style={{textDecoration:"none", color:"inherit"}}> ADD POST </Link>  </li>
-                    <li className="lr"><Link to="/login" style={{textDecoration:"none", color:"inherit"}}>LOGIN </Link> </li>
-                    <li className="lr"><Link to="/register" style={{textDecoration:"none", color:"inherit"}}>REGISTER</Link> </li>
+                   
+                    <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
+          </ul>
+          </div>
+                   
                  
-                </ul>
-            </div>
-            <div className="topRight">
+                
             
-          
-                <img    
-                className="topAvatar"
-                src= {avatar}
+            <div className="topRight">
+            {user ? (
+                <Link to="/settings">
+                <img className="topAvatar"
+                src={PublicFolder +user.profilePic}
                 alt="avatar"
                 />  
-            
-                <i className="fas fa-search"></i>
-                
-            </div>
-              
+            </Link>
+            ):(
+                <ul className="topList">
+                <li className="topListItem">
+                  <Link className="link" to="/login">
+                    LOGIN
+                  </Link>
+                </li>
+                <li className="topListItem">
+                  <Link className="link" to="/register">
+                    REGISTER
+                  </Link>
+                </li>
+              </ul>
+            )}
+            <i className="topSearchIcon fas fa-search"></i>
+          </div>
         </div>
-    )
+      );
+        
+    
 }

@@ -16,9 +16,12 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Indicators from "./pages/indicators/Indicators";
 import Formations from "./pages/formations/Formations";
+import {Context} from "../src/context/Context";
+import {useContext} from "react";
+
 
 function App() {
-  const user=false; 
+  const {user}= useContext(Context) ; 
   return (
     <Router>
     <Topbar/>

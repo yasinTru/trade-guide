@@ -24,9 +24,10 @@
 {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    object-fit: contain;
-    margin: 35px;
+    border-radius: 20%;
+    object-fit:cover;
+    margin: 15px;
+    cursor: pointer;
 }
 
 .topCenter

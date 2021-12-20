@@ -4,11 +4,13 @@ import "./sources.css"
 export default function Sources({sources}) {
     return (
         <div className="sources">
-        
-            {sources.map((p)=>
+           
+            {sources.map((p, pos)=>
             (
-                <Source source={p}></Source>
+                <Source key={pos} source={p}></Source>
+              
     ))  
+   
         }
     
            
