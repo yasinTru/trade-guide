@@ -60,13 +60,15 @@ export default function Settings() {
 
     return (
         <div className="settings">
+            <div className="line"></div>
+            <div className="horizonLine"></div>
             <div className="settingsWrapper">
                 <div className="settingsTitle">
-                    <span className="settingsUpdateTitle">Update Account </span>
-                    <span className="settingsDeleteTitle">Delete Account </span>
+                    <span className="settingsUpdateTitle" >Update Your Account </span>
+                  <span className="settingsDeleteTitle">Can delete your account: <br ></br> <strong>Delete Account </strong></span>
                 </div>
                 <form className="settingsForm" onSubmit={handleSubmit}>
-                    <label> Profile Picture</label>
+                    <label></label>
                     <div className="settingsPp">
                         <img
                         src={file ? URL.createObjectURL(file): PublicFolder + user.profilePic}
@@ -80,11 +82,11 @@ export default function Settings() {
                     </div>
 
                 <label>Username:</label>
-                <input type="text" placeholder={user.username}  onChange={e=> setUsername(e.target.value)}></input>
+                <input type="text" placeholder={"current username: "+user.username}  onChange={e=> setUsername(e.target.value)}></input>
                 <label>E-mail:</label>
-                <input type="email" placeholder={user.email} onChange={e=> setEmail(e.target.value)}></input>
+                <input type="email" placeholder={"current e-mail: " + user.email} onChange={e=> setEmail(e.target.value)}></input>
                 <label>Password:</label>
-                <input type="password" placeholder="password" onChange={e=> setPassword(e.target.value)}></input>
+                <input type="password" placeholder="Change password..." onChange={e=> setPassword(e.target.value)}></input>
                 <button className="settingsSubmit" type="submit">Update </button>
                 {success && (<span style={{color:"green", textAlign:"center", margin:"14px"}}> Profil güncellendi. </span>)}
                 </form>

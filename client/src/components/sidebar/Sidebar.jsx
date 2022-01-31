@@ -22,7 +22,7 @@ export default function Sidebar() {
        
             <div className="sidebar">
                 <div className="sidebarItem">
-                    <span className="sidebarTitle">ABOUT THIS SITE</span>
+                    <span className="sidebarTitle" style={{fontSize:"18px"}}>ABOUT THIS SITE</span>
                     <img className="aboutImage"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOAPoxDDqmcNf4CqtrcwHGcnkNbas_7lrOw&usqp=CAU"
                     alt="btc"
@@ -38,7 +38,7 @@ export default function Sidebar() {
 
                 </div>
             <div className="sidebarItem">
-            <span className="sidebarTitle">CATEGORIES</span>
+            <span className="sidebarTitle" style={{fontSize:"18px"}}>CATEGORIES</span>
             <ul className="sidebarList">
                 {cats.map((c, keyCat)=>(
                     <Link to={`/?categories=?${c.name}`} className="link" key={keyCat}>
