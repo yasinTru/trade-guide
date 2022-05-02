@@ -9,18 +9,17 @@
  
  
  Home page:
+  ##
  ![](https://github.com/yasinTru/trade-guide/blob/master/api/images/home.png)
  
- 
  A post with details page:
- 
+  ##
  ![](https://github.com/yasinTru/trade-guide/blob/master/api/images/detailsPage.png)
- 
- 
+  
  Add post page:
  ##
  ![](https://github.com/yasinTru/trade-guide/blob/master/api/images/addPost.png)
  
- 
  User's setting page:
+  ##
  ![](https://github.com/yasinTru/trade-guide/blob/master/api/images/settings.png)
