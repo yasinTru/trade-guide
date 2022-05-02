@@ -2,7 +2,7 @@
 
 ## I decided to design such a website in order to learn crypto trading and improve my coding skills.
 
-##Used Technologies
+## Used Technologies
  
  - React (with Context)
  - MongoDb
@@ -18,7 +18,7 @@
  
  
  Add post page:
- 
+ ##
  ![](https://github.com/yasinTru/trade-guide/blob/master/api/images/addPost.png)
  
  
